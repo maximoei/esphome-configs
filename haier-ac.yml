@@ -25,7 +25,7 @@ api:
   encryption:
     key: "yJw77lZi8OqCoB4iL31Ga2bNMx74KB50YBwUmSmfC+c="
 
-# Enable Web server.
+# Disable Web server to reduce load.
 #web_server:
 #  port: 80
 
@@ -153,7 +153,7 @@ text_sensor:
 
 # Exposed switches.
 button:
-  # Switch to restart the doorbell.
+  # Switch to restart the esp.
   - platform: restart
     name: Restart
 
