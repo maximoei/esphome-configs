@@ -1,0 +1,28 @@
+[12:01:25][D][haier.protocol:019]: Answer delay 86ms
+[12:01:30][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:01:30][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 04 00 83 00 00 01 14 00 00 00 00 00 00 00 00 03 03 03 2A 32 51 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:01:30][D][haier.protocol:019]: Answer delay 87ms
+[12:01:35][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:01:35][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 04 00 83 00 00 01 14 00 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 61 85 00 00 00 00 01 FF 02 20 00 AC
+[12:01:35][D][haier.protocol:019]: Answer delay 102ms
+[12:01:36][D][haier.protocol:019]: Sending frame: type 01, data: 5D 0C 00 01
+[12:01:38][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 04 00 83 00 00 01 14 01 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:01:40][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:01:40][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 04 00 83 00 00 01 14 01 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:01:40][D][haier.protocol:019]: Answer delay 86ms
+[12:01:45][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:01:47][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 04 00 83 00 00 01 14 01 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:01:50][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:01:50][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 04 00 83 00 00 01 14 01 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5F 84 00 00 00 00 01 FF 02 20 01 5A
+[12:01:50][D][haier.protocol:019]: Answer delay 102ms
+[12:01:52][D][haier.protocol:019]: Sending frame: type 01, data: 5D 0C 00 00
+[12:01:52][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 04 00 83 00 00 01 14 00 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:01:52][D][haier.protocol:019]: Answer delay 89ms
+[12:01:55][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:01:56][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 04 00 83 00 00 01 14 00 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:02:00][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:02:00][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 04 00 83 00 00 01 14 00 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:02:00][D][haier.protocol:019]: Answer delay 85ms
+[12:02:05][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:02:05][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 04 00 83 00 00 01 14 00 00 00 00 00 00 00 00 03 03 03 2A 32 52 00 00 0B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 5E 84 00 00 00 00 01 FF 02 20 01 68
+[12:02:06][D][haier.protocol:019]: Answer delay 102ms
