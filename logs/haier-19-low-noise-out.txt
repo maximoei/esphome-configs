@@ -1,0 +1,223 @@
+INFO ESPHome 2024.5.3
+INFO Reading configuration /config/esphome/haier-airco.yaml...
+INFO Detected log level for Haier protocol: DEBUG
+INFO Starting log output from 192.168.3.48 using esphome API
+INFO Successfully connected to haier-airco @ 192.168.3.48 in 0.012s
+INFO Successful handshake with haier-airco @ 192.168.3.48 in 0.035s
+[12:29:29][I][app:100]: ESPHome version 2024.5.3 compiled on May 27 2024, 11:50:38
+[12:29:29][C][wifi:580]: WiFi:
+[12:29:29][C][wifi:408]:   Local MAC: 9C:9C:1F:46:07:29
+[12:29:29][C][wifi:413]:   SSID: 'A network for NoT'[redacted]
+[12:29:29][C][wifi:416]:   IP Address: 192.168.3.48
+[12:29:29][C][wifi:419]:   BSSID: EA:B3:70:F9:15:11[redacted]
+[12:29:29][C][wifi:421]:   Hostname: 'haier-airco'
+[12:29:29][C][wifi:423]:   Signal strength: -69 dB ▂▄▆█
+[12:29:29][C][wifi:427]:   Channel: 6
+[12:29:29][C][wifi:428]:   Subnet: 255.255.255.0
+[12:29:29][C][wifi:429]:   Gateway: 192.168.3.1
+[12:29:29][C][wifi:430]:   DNS1: 192.168.3.1
+[12:29:29][C][wifi:431]:   DNS2: 0.0.0.0
+[12:29:29][C][logger:185]: Logger:
+[12:29:29][C][logger:186]:   Level: DEBUG
+[12:29:29][C][logger:188]:   Log Baud Rate: 0
+[12:29:29][C][logger:189]:   Hardware UART: UART0
+[12:29:29][C][uart.arduino_esp8266:118]: UART Bus:
+[12:29:29][C][uart.arduino_esp8266:119]:   TX Pin: GPIO1
+[12:29:29][C][uart.arduino_esp8266:120]:   RX Pin: GPIO3
+[12:29:29][C][uart.arduino_esp8266:122]:   RX Buffer Size: 256
+[12:29:29][C][uart.arduino_esp8266:124]:   Baud Rate: 9600 baud
+[12:29:29][C][uart.arduino_esp8266:125]:   Data Bits: 8
+[12:29:29][C][uart.arduino_esp8266:126]:   Parity: NONE
+[12:29:29][C][uart.arduino_esp8266:127]:   Stop bits: 1
+[12:29:29][C][uart.arduino_esp8266:129]:   Using hardware serial interface.
+[12:29:29][C][haier.climate:241]: Haier Climate 'Haier AC'
+[12:29:29][C][haier.climate:242]:   Device communication status: established
+[12:29:29][C][haier.climate:302]:   Protocol version: hOn
+[12:29:29][C][haier.climate:303]:   Control method: 2
+[12:29:29][C][haier.climate:305]:   Device protocol version: E++2.18
+[12:29:29][C][haier.climate:306]:   Device software version: 00000040
+[12:29:29][C][haier.climate:307]:   Device hardware version: 00000001
+[12:29:29][C][haier.climate:308]:   Device name: U-BAC
+[12:29:29][C][haier.climate:309]:   Device features: crc
+[12:29:29][C][haier.climate:315]:   Active alarms: 00 00 00 00 00 00 00 00
+[12:29:29][C][template.switch:068]: Template Switch 'Health mode (UV)'
+[12:29:29][C][template.switch:070]:   Icon: 'mdi:blur-radial'
+[12:29:29][C][template.switch:090]:   Restore Mode: restore defaults to OFF
+[12:29:29][C][template.switch:057]:   Optimistic: NO
+[12:29:29][C][version.text_sensor:021]: Version Text Sensor 'ESPHome Version'
+[12:29:29][C][version.text_sensor:021]:   Icon: 'mdi:new-box'
+[12:29:29][C][restart.button:017]: Restart Button 'Restart'
+[12:29:29][C][mdns:115]: mDNS:
+[12:29:29][C][mdns:116]:   Hostname: haier-airco
+[12:29:29][C][ota:096]: Over-The-Air Updates:
+[12:29:29][C][ota:097]:   Address: haier-airco.local:8266
+[12:29:29][C][ota:100]:   Using Password.
+[12:29:29][C][ota:103]:   OTA version: 2.
+[12:29:29][C][api:139]: API Server:
+[12:29:29][C][api:140]:   Address: haier-airco.local:6053
+[12:29:29][C][api:144]:   Using noise encryption: NO
+[12:29:29][C][wifi_info:009]: WifiInfo IPAddress 'IP'
+[12:29:32][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:29:32][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 57 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:29:32][D][haier.protocol:019]: Answer delay 89ms
+[12:29:32][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:32][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:32][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:32][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:32][D][haier.climate:994]: Set Point Status = 0x6
+[12:29:37][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:29:37][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 57 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 51 66 00 00 00 00 01 FF 02 24 01 68
+[12:29:37][D][haier.protocol:019]: Answer delay 107ms
+[12:29:37][D][sensor:093]: 'Haier Outdoor Out Air Temperature': Sending state 38.00000 °C with 0 decimals of accuracy
+[12:29:37][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:37][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:37][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:37][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:37][D][haier.climate:994]: Set Point Status = 0x6
+[12:29:40][D][haier.protocol:019]: Sending frame: type 01, data: 5D 13 00 00
+[12:29:40][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 57 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:29:40][D][haier.protocol:019]: Answer delay 95ms
+[12:29:40][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:40][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:40][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:40][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:40][D][haier.climate:994]: Set Point Status = 0x6
+[12:29:42][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:29:42][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 57 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:29:42][D][haier.protocol:019]: Answer delay 96ms
+[12:29:42][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:42][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:42][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:42][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:42][D][haier.climate:994]: Set Point Status = 0x6
+[12:29:47][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:29:47][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 57 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:29:47][D][haier.protocol:019]: Answer delay 87ms
+[12:29:47][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:47][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:47][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:47][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:47][D][haier.climate:994]: Set Point Status = 0x6
+[12:29:52][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:29:52][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 57 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 51 67 00 00 00 00 01 FF 02 24 01 68
+[12:29:52][D][haier.protocol:019]: Answer delay 102ms
+[12:29:52][D][sensor:093]: 'Haier Outdoor Out Air Temperature': Sending state 39.00000 °C with 0 decimals of accuracy
+[12:29:52][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:52][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:52][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:52][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:52][D][haier.climate:994]: Set Point Status = 0x6
+[12:29:54][D][haier.protocol:019]: Sending frame: type 01, data: 5D 13 00 01
+[12:29:55][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 57 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:29:55][D][haier.protocol:019]: Answer delay 91ms
+[12:29:55][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:55][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:55][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:55][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:55][D][haier.climate:994]: Set Point Status = 0x6
+[12:29:57][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:29:57][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:29:57][D][haier.protocol:019]: Answer delay 88ms
+[12:29:57][D][sensor:093]: 'Haier outdoor temperature': Sending state 24.00000 °C with 0 decimals of accuracy
+[12:29:57][D][haier.climate:990]: HVAC Mode = 0x1
+[12:29:57][D][haier.climate:991]: Fan speed Status = 0x5
+[12:29:57][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:29:57][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:29:57][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:02][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:30:02][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:02][D][haier.protocol:019]: Answer delay 85ms
+[12:30:02][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:02][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:02][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:02][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:02][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:07][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:30:07][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 51 67 00 00 00 00 01 FF 02 24 01 68
+[12:30:07][D][haier.protocol:019]: Answer delay 103ms
+[12:30:07][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:07][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:07][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:07][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:07][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:12][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:30:12][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:12][D][haier.protocol:019]: Answer delay 86ms
+[12:30:12][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:12][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:12][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:12][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:12][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:16][D][haier.protocol:019]: Sending frame: type 01, data: 5D 13 00 02
+[12:30:16][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:16][D][haier.protocol:019]: Answer delay 94ms
+[12:30:16][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:16][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:16][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:16][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:16][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:18][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:30:18][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:18][D][haier.protocol:019]: Answer delay 86ms
+[12:30:18][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:18][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:18][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:18][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:18][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:23][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:30:23][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 51 66 00 00 00 00 01 FF 02 24 01 68
+[12:30:23][D][haier.protocol:019]: Answer delay 103ms
+[12:30:23][D][sensor:093]: 'Haier Outdoor Out Air Temperature': Sending state 38.00000 °C with 0 decimals of accuracy
+[12:30:23][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:23][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:23][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:23][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:23][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:28][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:30:28][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:28][D][haier.protocol:019]: Answer delay 88ms
+[12:30:28][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:28][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:28][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:28][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:28][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:30][D][haier.protocol:019]: Sending frame: type 01, data: 5D 13 00 03
+[12:30:30][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:30][D][haier.protocol:019]: Answer delay 93ms
+[12:30:30][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:30][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:30][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:30][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:30][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:33][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:30:33][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:33][D][haier.protocol:019]: Answer delay 86ms
+[12:30:33][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:33][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:33][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:33][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:33][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:38][D][haier.protocol:019]: Sending frame: type 01, data: 4D FE
+[12:30:38][D][haier.protocol:019]: Frame found: type 02, data: 7D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 01 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 51 66 00 00 00 00 01 FF 02 24 01 68
+[12:30:38][D][haier.protocol:019]: Answer delay 102ms
+[12:30:38][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:38][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:38][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:38][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:38][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:39][D][haier.protocol:019]: Sending frame: type 01, data: 5D 13 00 00
+[12:30:39][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:39][D][haier.protocol:019]: Answer delay 87ms
+[12:30:39][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:39][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:39][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:39][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:39][D][haier.climate:994]: Set Point Status = 0x6
+[12:30:43][D][haier.protocol:019]: Sending frame: type 01, data: 4D 01
+[12:30:43][D][haier.protocol:019]: Frame found: type 02, data: 6D 01 06 00 25 00 00 03 14 00 00 00 00 00 00 00 00 03 03 03 28 32 58 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[12:30:43][D][haier.protocol:019]: Answer delay 85ms
+[12:30:43][D][haier.climate:990]: HVAC Mode = 0x1
+[12:30:43][D][haier.climate:991]: Fan speed Status = 0x5
+[12:30:43][D][haier.climate:992]: Horizontal Swing Status = 0x0
+[12:30:43][D][haier.climate:993]: Vertical Swing Status = 0x0
+[12:30:43][D][haier.climate:994]: Set Point Status = 0x6
