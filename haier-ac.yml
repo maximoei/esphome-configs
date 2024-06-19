@@ -22,10 +22,28 @@ logger:
 
 # Enable Home Assistant API
 api:
-  encryption:
-    key: "SECRET"
+  services:
+    - service: send_custom_message
+      variables:
+        message_type: int
+        message_data: int[]
+      then:
+        - lambda: |-
+            if ((message_type < 0) || (message_type > 255)) {
+              ESP_LOGE("send_custom_command", "Wrong custom message type (should be byte)");
+              return;  
+            }
+            if (message_data.size() == 0) {
+              id(haier_ac).send_custom_command(haier_protocol::HaierMessage((haier_protocol::FrameType) message_type));
+            } else {
+              size_t sz = message_data.size();
+              std::unique_ptr<uint8_t[]> msg_buffer(new uint8_t [sz]); 
+              for (unsigned int i = 0; i < sz; i++)
+                msg_buffer[i] = message_data[i];
+              id(haier_ac).send_custom_command(haier_protocol::HaierMessage((haier_protocol::FrameType) message_type, msg_buffer.get(), sz));
+            }
 
-# Disable Web server to reduce load.
+# Enable Web server.
 #web_server:
 #  port: 80
 
@@ -63,9 +81,9 @@ climate:
     #outdoor_temperature:        # Optional, outdoor temperature sensor
     #  name: Haier AC outdoor temperature
     visual:                     # Optional, you can use it to limit min and max temperatures in UI (not working for remote!)
-      min_temperature: 18 °C
+      min_temperature: 17 °C
       max_temperature: 25 °C
-      temperature_step: 0.5 °C
+      temperature_step: 1 °C
     #supported_modes:            # Optional, can be used to disable some modes if you don't need them
     #  - 'OFF'
     #  - AUTO
@@ -73,13 +91,13 @@ climate:
     #  - HEAT
     #  - DRY
     #  - FAN_ONLY
-    #supported_presets:          # Optional, can be used to disable some presets if your AC does not support it
+    supported_presets:          # Optional, can be used to disable some presets if your AC does not support it
     #  - AWAY
-    #  - ECO
-    #  - BOOST
-    #  - SLEEP
-    #supported_swing_modes:      # Optional, can be used to disable some (or all) swing modes if your AC does not support it
-    #  - 'OFF'
+      - ECO
+      - BOOST
+      - SLEEP
+    supported_swing_modes:      # Optional, can be used to disable some (or all) swing modes if your AC does not support it
+      - 'OFF'
     #  - VERTICAL
     #  - HORIZONTAL
     #  - BOTH
@@ -97,6 +115,14 @@ climate:
             level: INFO
             format: "Alarm deactivated. Code: %d. Message: \"%s\""
             args: [ code, message]
+    on_status_message:
+      then:
+        - globals.set:
+            id: low_noise_out
+            value: !lambda |-
+              if (data_size > 16)
+                return (data[16] & 0x01) != 0;
+              return false;
 
 sensor:
   - platform: haier
@@ -153,7 +179,7 @@ text_sensor:
 
 # Exposed switches.
 button:
-  # Switch to restart the esp.
+  # Switch to restart the doorbell.
   - platform: restart
     name: Restart
 
@@ -169,3 +195,19 @@ switch:
       climate.haier.health_on: haier_ac
     turn_off_action:
       climate.haier.health_off: haier_ac
+  - platform: template
+    name: Low Noise Outside
+    optimistic: false
+    lambda: return id(low_noise_out);
+    turn_on_action:
+      then:
+        - lambda: id(haier_ac).send_custom_command(haier_protocol::HaierMessage(haier_protocol::FrameType::CONTROL, (const uint8_t[]) {0x5D, 0x13, 0x00, 0x01}, 4));
+    turn_off_action:
+      then:
+        - lambda: id(haier_ac).send_custom_command(haier_protocol::HaierMessage(haier_protocol::FrameType::CONTROL, (const uint8_t[]) {0x5D, 0x13, 0x00, 0x00}, 4));
+
+globals:
+  - id: low_noise_out
+    type: bool
+    restore_value: no
+    initial_value: 'false'
